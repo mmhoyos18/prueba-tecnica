@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="/countries">Ver Todos los Países</a>
+    <hr>
+    <input type="text" id="country_name"> <button onclick="search_country()">Buscar</button>
+    <script>
+
+        function search_country(){
+            var country_name = document.getElementById('country_name').value
+            if(country_name != "" && country_name != undefined && country_name != null){
+                window.location.href = 'http://localhost:3000/countries/'+country_name+'';
+            }else{
+                alert("Debe ingresar un nombre de país");
+            }
+        }
+
+    </script>
+</body>
+</html>

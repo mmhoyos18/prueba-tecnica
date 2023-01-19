@@ -1,0 +1,18 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <% if(country.status == 404){ %>
+        <h1>El País <%= country_name %> no Existe en la Base de Datos</h1>
+    <% }else{ %>
+        <h1><%= country[0].name.common %></h1>
+        <h3>Area: <%= country[0].area %></h3>
+        <h3>Population: <%= country[0].population %></h3>
+    <% } %>
+    <a href="/">Volver</a>
+</body>
+</html>
